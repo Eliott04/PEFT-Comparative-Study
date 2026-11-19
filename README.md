@@ -1,27 +1,34 @@
-# Parameter-Efficient Fine-Tuning — Comparative Study
+# Étude comparative des méthodes de fine-tuning efficace (PEFT)
 
-**Comparative study of PEFT methods for sentiment classification**, by Eliott Rakotondramanitra and Louis-Antoine Pham.
+**Étude expérimentale des méthodes PEFT pour la classification de sentiments**, réalisée par Eliott Rakotondramanitra et Louis-Antoine Pham.
 
-## Objective & dataset
+## Objectif et données
 
-Compare **LoRA, QLoRA, IA³ and Prompt Tuning** with a pretrained-classifier baseline, assessing classification accuracy, trainable parameters, model size and training time. Experiments use the **IMDb** sentiment classification dataset with pretrained **DistilBERT** and **RoBERTa** models.
+Comparer **LoRA, QLoRA, IA³ et Prompt Tuning** à un modèle de référence pré-entraîné, selon quatre critères : **précision de classification**, **nombre de paramètres entraînables**, **taille du modèle en mémoire** et **temps d'entraînement**.
+
+Les expériences utilisent le jeu de données **IMDb** (classification binaire de sentiments) et les modèles **DistilBERT** et **RoBERTa** pré-entraînés.
 
 ## Technologies
 
-Python · Jupyter · PyTorch · Hugging Face Transformers · PEFT · Datasets · bitsandbytes · scikit-learn · Matplotlib
+Python · Jupyter Notebook · PyTorch · Hugging Face Transformers · PEFT · Datasets · bitsandbytes · scikit-learn · Matplotlib
 
-## Experiments & key results
+## Expériences et principaux résultats
 
-The notebook studies manual LoRA, INT8 quantization and the four PEFT methods on DistilBERT and RoBERTa.
+Le notebook explore une implémentation manuelle de **LoRA**, la **quantification INT8**, puis compare les méthodes **LoRA, QLoRA, IA³ et Prompt Tuning** sur DistilBERT et RoBERTa.
 
-| Model | Method | Accuracy | Model size |
+| Modèle | Méthode | Accuracy | Taille du modèle |
 | --- | --- | ---: | ---: |
-| DistilBERT | Pretrained baseline | 89.6% | ~270 MB |
-| DistilBERT | LoRA | 90.6% | ~272 MB |
-| DistilBERT | QLoRA | 90.0% | **122.7 MB** |
-| RoBERTa | Pretrained baseline | 90.6% | ~499 MB |
-| RoBERTa | QLoRA | 90.2% | **206.1 MB** |
+| DistilBERT | Référence pré-entraînée | 89,6 % | ~270 Mo |
+| DistilBERT | LoRA | 90,6 % | ~272 Mo |
+| DistilBERT | QLoRA | 90,0 % | **122,7 Mo** |
+| RoBERTa | Référence pré-entraînée | 90,6 % | ~499 Mo |
+| RoBERTa | QLoRA | 90,2 % | **206,1 Mo** |
 
-**Key takeaway:** PEFT achieves competitive accuracy while reducing the number of trainable parameters. **QLoRA** offers a particularly favorable accuracy–memory trade-off in these experiments.
+**Conclusion :** les méthodes PEFT conservent des performances de classification compétitives tout en réduisant fortement le nombre de paramètres entraînés. Dans ces expériences, **QLoRA offre un compromis particulièrement intéressant entre précision et utilisation de la mémoire**.
 
-Results are reported from the accompanying study, not independently reproduced. The baseline is a pretrained sentiment classifier, not a separately executed full fine-tuning run.
+*Ces résultats proviennent du rapport expérimental et n'ont pas été reproduits indépendamment. Le modèle de référence est un classifieur pré-entraîné, et non un entraînement complet (« full fine-tuning ») exécuté séparément.*
+
+## Fichiers du projet
+
+- [Notebook des expériences](PEFT_project.ipynb)
+- [Rapport expérimental](PEFT_Report.pdf)
