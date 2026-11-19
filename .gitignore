@@ -1,0 +1,9 @@
+.ipynb_checkpoints/
+__pycache__/
+.venv/
+.env
+outputs/
+checkpoints/
+wandb/
+*.safetensors
+pytorch_model.bin
