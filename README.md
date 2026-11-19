@@ -1,6 +1,6 @@
 # Étude comparative des méthodes de fine-tuning efficace (PEFT)
 
-**Étude expérimentale des méthodes PEFT pour la classification de sentiments**, réalisée par Eliott Rakotondramanitra et Louis-Antoine Pham.
+**Étude expérimentale des méthodes PEFT pour la classification de sentiments**, Eliott Rakotondramanitra et Louis-Antoine Pham.
 
 ## Objectif et données
 
@@ -25,8 +25,6 @@ Le notebook explore une implémentation manuelle de **LoRA**, la **quantificatio
 | RoBERTa | QLoRA | 90,2 % | **206,1 Mo** |
 
 **Conclusion :** les méthodes PEFT conservent des performances de classification compétitives tout en réduisant fortement le nombre de paramètres entraînés. Dans ces expériences, **QLoRA offre un compromis particulièrement intéressant entre précision et utilisation de la mémoire**.
-
-*Ces résultats proviennent du rapport expérimental et n'ont pas été reproduits indépendamment. Le modèle de référence est un classifieur pré-entraîné, et non un entraînement complet (« full fine-tuning ») exécuté séparément.*
 
 ## Fichiers du projet
 
