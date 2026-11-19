@@ -25,10 +25,3 @@ The notebook studies manual LoRA, INT8 quantization and the four PEFT methods on
 **Key takeaway:** PEFT achieves competitive accuracy while reducing the number of trainable parameters. **QLoRA** offers a particularly favorable accuracy–memory trade-off in these experiments.
 
 Results are reported from the accompanying study, not independently reproduced. The baseline is a pretrained sentiment classifier, not a separately executed full fine-tuning run.
-
-## Files
-
-- [PEFT_project.ipynb](PEFT_project.ipynb) — experiments and visualizations.
-- [PEFT_Report.pdf](PEFT_Report.pdf) — methodology, benchmark figures and discussion.
-
-**Note:** The notebook requires model/dataset downloads and a compatible runtime; 4-bit quantization may require CUDA. End-to-end execution has not been independently validated.
